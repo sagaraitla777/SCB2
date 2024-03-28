@@ -24,3 +24,7 @@ steps:
   inputs:
     Contents: '**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    ArtifactName: 'war'
+    ArtifactType: 'Container'
